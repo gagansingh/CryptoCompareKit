@@ -1,6 +1,6 @@
 //
 //  CryptoCompare.swift
-//  Coins Explorer
+//  CryptoCompareKit
 //
 //  Created by Spiros Gerokostas on 04/11/2018.
 //  Copyright © 2018 Spiros Gerokostas. All rights reserved.
@@ -15,7 +15,7 @@ public class CryptoCompare {
     public typealias EmptyResponse = () -> Void
     
     private enum API {
-        static let baseURL = "https://min-api.cryptocompare.com"
+        static let baseURL = "https://min-api.cryptocompare.com/data"
     }
     
     enum HTTPMethod: String {
@@ -34,35 +34,38 @@ public class CryptoCompare {
                                success: SuccessResponse<T>?,
                                failure: FailureResponse?) {
         let urlRequest = buildURLRequest(endpoint, method: method, parameters: parameters)
-        
         urlSession.dataTask(with: urlRequest) { data, response, error in
-            if let data = data {
-                DispatchQueue.global(qos: .utility).async {
-                    do {
-                        let jsonDecoder = JSONDecoder()
-                        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let object = try jsonDecoder.decode(CryptoCompareResponse<T>.self, from: data)
-                        if let data = object.data {
-                            DispatchQueue.main.async {
-                                success?(data)
+            if let error = error {
+                failure?(error)
+            } else {
+                let http = response as! HTTPURLResponse
+                switch http.statusCode {
+                case 200:
+                    if let data = data {
+                        DispatchQueue.global(qos: .utility).async {
+                            do {
+                                let jsonDecoder = JSONDecoder()
+                                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+                                let object = try jsonDecoder.decode(T.self, from: data)
+                                DispatchQueue.main.async {
+                                    success?(object)
+                                }
+                            } catch let error {
+                                DispatchQueue.main.async {
+                                    failure?(CryptoCompareError.decoding(message: error.localizedDescription))
+                                }
                             }
                         }
-                    } catch let error {
-                        print(error)
-                        DispatchQueue.main.async {
-                            failure?(CryptoCompareError.decoding(message: error.localizedDescription))
-                        }
                     }
+                default:
+                    break
                 }
-            } else if let error = error {
-                failure?(error)
             }
         }.resume()
     }
     
     private func buildURLRequest(_ endpoint: String, method: HTTPMethod, parameters: Parameters) -> URLRequest {
         let url = URL(string: API.baseURL + endpoint)!
-        print(url)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         switch method {

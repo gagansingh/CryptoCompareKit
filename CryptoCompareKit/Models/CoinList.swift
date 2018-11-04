@@ -8,12 +8,12 @@
 
 import UIKit
 
-struct CryptoCompareResponse<T: Decodable>: Decodable {
-    let data: T?
-    let response: String
-    let message: String
-    let baseImageUrl: String
-    let baseLinkUrl: String
+public struct CoinList: Decodable {
+    public let data: [String: Coin]
+    public let response: String
+    public let message: String
+    public let baseImageUrl: String
+    public let baseLinkUrl: String
     
     private enum CodingKeys : String, CodingKey {
         case data = "Data"

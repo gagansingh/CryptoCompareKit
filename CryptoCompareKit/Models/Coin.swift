@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct TestCoin: Decodable {
+public struct Coin: Decodable {
     public let fullName: String
     public let sortOrder: String
     
