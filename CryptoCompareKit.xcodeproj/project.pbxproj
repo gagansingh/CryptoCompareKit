@@ -10,6 +10,12 @@
 		5698D1C8218EFC8E00CD97C7 /* CryptoCompareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5698D1BE218EFC8E00CD97C7 /* CryptoCompareKit.framework */; };
 		5698D1CD218EFC8E00CD97C7 /* CryptoCompareKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1CC218EFC8E00CD97C7 /* CryptoCompareKitTests.swift */; };
 		5698D1CF218EFC8E00CD97C7 /* CryptoCompareKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5698D1C1218EFC8E00CD97C7 /* CryptoCompareKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5698D1E0218EFCDC00CD97C7 /* CoinsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1D9218EFCDC00CD97C7 /* CoinsList.swift */; };
+		5698D1E1218EFCDC00CD97C7 /* CryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1DA218EFCDC00CD97C7 /* CryptoCompare.swift */; };
+		5698D1E2218EFCDC00CD97C7 /* URL+CryptoCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1DC218EFCDC00CD97C7 /* URL+CryptoCompare.swift */; };
+		5698D1E3218EFCDC00CD97C7 /* CryptoCompareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1DE218EFCDC00CD97C7 /* CryptoCompareResponse.swift */; };
+		5698D1E4218EFCDC00CD97C7 /* CryptoCompareError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1DF218EFCDC00CD97C7 /* CryptoCompareError.swift */; };
+		5698D1E6218EFD2100CD97C7 /* TestCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1E5218EFD2100CD97C7 /* TestCoin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		5698D1C7218EFC8E00CD97C7 /* CryptoCompareKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoCompareKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5698D1CC218EFC8E00CD97C7 /* CryptoCompareKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCompareKitTests.swift; sourceTree = "<group>"; };
 		5698D1CE218EFC8E00CD97C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5698D1D9218EFCDC00CD97C7 /* CoinsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinsList.swift; sourceTree = "<group>"; };
+		5698D1DA218EFCDC00CD97C7 /* CryptoCompare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCompare.swift; sourceTree = "<group>"; };
+		5698D1DC218EFCDC00CD97C7 /* URL+CryptoCompare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+CryptoCompare.swift"; sourceTree = "<group>"; };
+		5698D1DE218EFCDC00CD97C7 /* CryptoCompareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCompareResponse.swift; sourceTree = "<group>"; };
+		5698D1DF218EFCDC00CD97C7 /* CryptoCompareError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCompareError.swift; sourceTree = "<group>"; };
+		5698D1E5218EFD2100CD97C7 /* TestCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCoin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,10 @@
 		5698D1C0218EFC8E00CD97C7 /* CryptoCompareKit */ = {
 			isa = PBXGroup;
 			children = (
+				5698D1DA218EFCDC00CD97C7 /* CryptoCompare.swift */,
+				5698D1D8218EFCDC00CD97C7 /* Endpoints */,
+				5698D1DB218EFCDC00CD97C7 /* Extensions */,
+				5698D1DD218EFCDC00CD97C7 /* Models */,
 				5698D1C1218EFC8E00CD97C7 /* CryptoCompareKit.h */,
 				5698D1C2218EFC8E00CD97C7 /* Info.plist */,
 			);
@@ -84,6 +100,32 @@
 				5698D1CE218EFC8E00CD97C7 /* Info.plist */,
 			);
 			path = CryptoCompareKitTests;
+			sourceTree = "<group>";
+		};
+		5698D1D8218EFCDC00CD97C7 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				5698D1D9218EFCDC00CD97C7 /* CoinsList.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		5698D1DB218EFCDC00CD97C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5698D1DC218EFCDC00CD97C7 /* URL+CryptoCompare.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5698D1DD218EFCDC00CD97C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5698D1E5218EFD2100CD97C7 /* TestCoin.swift */,
+				5698D1DE218EFCDC00CD97C7 /* CryptoCompareResponse.swift */,
+				5698D1DF218EFCDC00CD97C7 /* CryptoCompareError.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +190,7 @@
 				TargetAttributes = {
 					5698D1BD218EFC8E00CD97C7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					5698D1C6218EFC8E00CD97C7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5698D1E1218EFCDC00CD97C7 /* CryptoCompare.swift in Sources */,
+				5698D1E3218EFCDC00CD97C7 /* CryptoCompareResponse.swift in Sources */,
+				5698D1E6218EFD2100CD97C7 /* TestCoin.swift in Sources */,
+				5698D1E0218EFCDC00CD97C7 /* CoinsList.swift in Sources */,
+				5698D1E2218EFCDC00CD97C7 /* URL+CryptoCompare.swift in Sources */,
+				5698D1E4218EFCDC00CD97C7 /* CryptoCompareError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +390,7 @@
 		5698D1D3218EFC8E00CD97C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.spirosgerokostas.CryptoCompareKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +417,7 @@
 		5698D1D4218EFC8E00CD97C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +443,7 @@
 		5698D1D6218EFC8E00CD97C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A22EW7MN8G;
 				INFOPLIST_FILE = CryptoCompareKitTests/Info.plist;
@@ -409,6 +462,7 @@
 		5698D1D7218EFC8E00CD97C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A22EW7MN8G;
 				INFOPLIST_FILE = CryptoCompareKitTests/Info.plist;
