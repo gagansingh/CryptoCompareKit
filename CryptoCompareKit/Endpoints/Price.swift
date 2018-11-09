@@ -10,7 +10,7 @@ extension CryptoCompare {
     public typealias Price = [String: Double]
     public typealias PriceMulti = [String: [String: Double]]
     public func price(_ fsym: String,
-                      tsyms:String,
+                      tsyms: String,
                       success: SuccessResponse<Price>?,
                       failure: FailureResponse?) {
         var parameters = Parameters()
@@ -19,7 +19,7 @@ extension CryptoCompare {
         request("/price", parameters: parameters, success: success, failure: failure)
     }
     public func priceMulti(_ fsyms: String,
-                      tsyms:String,
+                      tsyms: String,
                       success: SuccessResponse<PriceMulti>?,
                       failure: FailureResponse?) {
         var parameters = Parameters()
@@ -28,7 +28,7 @@ extension CryptoCompare {
         request("/pricemulti", parameters: parameters, success: success, failure: failure)
     }
     public func priceMultiFull(_ fsyms: String,
-                           tsyms:String,
+                           tsyms: String,
                            success: SuccessResponse<PriceMultiFull>?,
                            failure: FailureResponse?) {
         var parameters = Parameters()
@@ -37,7 +37,7 @@ extension CryptoCompare {
         request("/pricemultifull", parameters: parameters, success: success, failure: failure)
     }
     public func priceGenerateAverage(fsym: String,
-                               tsym:String,
+                               tsym: String,
                                e: String,
                                success: SuccessResponse<PriceGenerateAverage>?,
                                failure: FailureResponse?) {

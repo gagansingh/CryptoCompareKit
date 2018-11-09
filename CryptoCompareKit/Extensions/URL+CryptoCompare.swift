@@ -14,7 +14,7 @@ extension URL {
     func appendingfQueryParameters(_ paramaters: Parameters) -> URL {
         var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: true)!
         var items = urlComponents.queryItems ?? []
-        items += paramaters.map{ URLQueryItem(name: $0, value: "\($1)") }
+        items += paramaters.map { URLQueryItem(name: $0, value: "\($1)") }
         urlComponents.queryItems = items
         return urlComponents.url!
     }

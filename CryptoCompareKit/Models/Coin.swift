@@ -11,8 +11,8 @@ import UIKit
 public struct Coin: Decodable {
     public let fullName: String
     public let sortOrder: String
-    
-    private enum CodingKeys : String, CodingKey {
+
+    private enum CodingKeys: String, CodingKey {
         case fullName = "FullName"
         case sortOrder = "SortOrder"
     }

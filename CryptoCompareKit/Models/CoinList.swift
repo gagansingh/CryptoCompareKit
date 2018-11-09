@@ -14,8 +14,8 @@ public struct CoinList: Decodable {
     public let message: String
     public let baseImageUrl: String
     public let baseLinkUrl: String
-    
-    private enum CodingKeys : String, CodingKey {
+
+    private enum CodingKeys: String, CodingKey {
         case data = "Data"
         case response = "Response"
         case message = "Message"
@@ -23,5 +23,3 @@ public struct CoinList: Decodable {
         case baseLinkUrl = "BaseLinkUrl"
     }
 }
-
-public struct CryptoCompareEmptyResponse: Decodable { }
