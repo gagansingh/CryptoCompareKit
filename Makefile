@@ -7,7 +7,7 @@ PLATFORM ?= iOS
 OS ?= 12
 
 ifeq ($(PLATFORM), iOS)
-	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 7,OS=12'
+	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 7,OS=12.0'
 endif
 
 XCPRETTY :=
