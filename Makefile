@@ -4,10 +4,10 @@ BUILD_FLAGS = -workspace $(WORKSPACE) -scheme $(SCHEME) -destination $(DESTINATI
 SCHEME ?= $(TARGET)
 TARGET ?= CryptoCompareKit
 PLATFORM ?= iOS
-OS ?= 10
+OS ?= 12
 
 ifeq ($(PLATFORM), iOS)
-	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 7,OS=10'
+	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 7,OS=12'
 endif
 
 XCPRETTY :=
