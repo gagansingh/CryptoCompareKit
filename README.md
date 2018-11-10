@@ -1,5 +1,6 @@
 # CryptoCompareKit
 
+[![Build Status](https://travis-ci.org/sger/CryptoCompareKit.svg?branch=master)](https://travis-ci.org/sger/CryptoCompareKit)
 [![Version](https://img.shields.io/cocoapods/v/CryptoCompareKit.svg?style=flat)](http://cocoapods.org/pods/CryptoCompareKit)
 [![License](https://img.shields.io/cocoapods/l/CryptoCompareKit.svg?style=flat)](http://cocoapods.org/pods/CryptoCompareKit)
 [![Platform](https://img.shields.io/cocoapods/p/CryptoCompareKit.svg?style=flat)](http://cocoapods.org/pods/CryptoCompareKit)
