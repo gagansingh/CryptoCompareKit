@@ -7,28 +7,34 @@
 //
 
 import XCTest
+import OHHTTPStubs
 @testable import CryptoCompareKit
 
 class CryptoCompareKitTests: XCTestCase {
-
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        
+        OHHTTPStubs.onStubMissing { request in
+            XCTFail("Missing stub for \(request)")
+        }
+        
+        FixtureLoader.stubCoinListResponse()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+        FixtureLoader.reset()
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testFetchCoinListResponse() {
+        let exp = expectation(description: "Received response")
+        CryptoCompare.shared.coinList(success: { coinList in
+            exp.fulfill()
+            XCTAssertEqual(coinList.response, "Success")
+        }) { error in
+            XCTFail("Error in coin list request: \(error)")
         }
+        waitForExpectations(timeout: 3.0, handler: nil)
     }
-
 }
