@@ -18,6 +18,12 @@ class FixtureLoader {
             return jsonFixture(with: "coinList.json")
         }
     }
+    static func stubCoinListReturnFailure() {
+        stub(condition: isHost("min-api.cryptocompare.com") && isPath("/data/all/coinlist")) { response -> OHHTTPStubsResponse in
+            let data = "Server error".data(using: .utf8)!
+            return OHHTTPStubsResponse(data: data, statusCode: 500, headers: [:])
+        }
+    }
     private static func jsonFixture(with filename: String) -> OHHTTPStubsResponse {
         let bundle = OHResourceBundle("Fixtures", FixtureLoader.self)!
         let path = OHPathForFileInBundle(filename, bundle)!

@@ -6,13 +6,12 @@
 //  Copyright © 2018 Spiros Gerokostas. All rights reserved.
 //
 
-import UIKit
+import os.log
 
 public class CryptoCompare {
 
     public typealias SuccessResponse<T> = (_ data: T) -> Void
     public typealias FailureResponse = (_ error: Error) -> Void
-    public typealias EmptyResponse = () -> Void
 
     private enum API {
         static let baseURL = "https://min-api.cryptocompare.com/data"
@@ -59,6 +58,7 @@ public class CryptoCompare {
                         }
                     }
                 default:
+                    failure?(CryptoCompareError.serverError(statusCode: http.statusCode))
                     break
                 }
             }
@@ -73,7 +73,7 @@ public class CryptoCompare {
         case .get:
             urlRequest.url?.appendQueryParameters(parameters)
         }
-        print(urlRequest.url?.absoluteString ?? "")
+        os_log("%@ %s", log: Log.cryptoCompare, type: .debug, #function, urlRequest.url?.absoluteString ?? "")
         return urlRequest
     }
 }

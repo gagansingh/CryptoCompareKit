@@ -11,6 +11,7 @@
 		5609F7C0218F2758005F08C1 /* PriceMultiFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609F7BF218F2758005F08C1 /* PriceMultiFull.swift */; };
 		56195C432196D75000F33390 /* Fixtures.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 56195C422196D75000F33390 /* Fixtures.bundle */; };
 		56195C462196D7B400F33390 /* FixtureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56195C452196D7B400F33390 /* FixtureLoader.swift */; };
+		561D94E1219732400080F6C1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561D94E0219732400080F6C1 /* Log.swift */; };
 		5630AB85218F0B0B0009BB22 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630AB84218F0B0B0009BB22 /* Price.swift */; };
 		5698D1C8218EFC8E00CD97C7 /* CryptoCompareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5698D1BE218EFC8E00CD97C7 /* CryptoCompareKit.framework */; };
 		5698D1CD218EFC8E00CD97C7 /* CryptoCompareKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1CC218EFC8E00CD97C7 /* CryptoCompareKitTests.swift */; };
@@ -44,6 +45,7 @@
 		5609F7BF218F2758005F08C1 /* PriceMultiFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceMultiFull.swift; sourceTree = "<group>"; };
 		56195C422196D75000F33390 /* Fixtures.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fixtures.bundle; sourceTree = "<group>"; };
 		56195C452196D7B400F33390 /* FixtureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureLoader.swift; sourceTree = "<group>"; };
+		561D94E0219732400080F6C1 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		5630AB84218F0B0B0009BB22 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		5698D1BE218EFC8E00CD97C7 /* CryptoCompareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoCompareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5698D1C1218EFC8E00CD97C7 /* CryptoCompareKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCompareKit.h; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				5698D1DD218EFCDC00CD97C7 /* Models */,
 				5698D1C1218EFC8E00CD97C7 /* CryptoCompareKit.h */,
 				5698D1C2218EFC8E00CD97C7 /* Info.plist */,
+				561D94E0219732400080F6C1 /* Log.swift */,
 			);
 			path = CryptoCompareKit;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			files = (
 				5609F7C0218F2758005F08C1 /* PriceMultiFull.swift in Sources */,
 				56C29E272195E3D50046ACEC /* HistoricalTimeResponse.swift in Sources */,
+				561D94E1219732400080F6C1 /* Log.swift in Sources */,
 				5698D1E1218EFCDC00CD97C7 /* CryptoCompare.swift in Sources */,
 				5630AB85218F0B0B0009BB22 /* Price.swift in Sources */,
 				56C29E252195E3900046ACEC /* History.swift in Sources */,

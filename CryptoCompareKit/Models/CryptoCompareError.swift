@@ -12,4 +12,7 @@ public enum CryptoCompareError: Error {
     case badRequest
     case decoding(message: String)
     case invalidRequest(message: String)
+    case notFound // 404
+    case serverError(statusCode: Int) // 5xx
+    case requestError // 4xx
 }

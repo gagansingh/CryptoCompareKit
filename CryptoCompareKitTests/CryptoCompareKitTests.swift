@@ -33,7 +33,25 @@ class CryptoCompareKitTests: XCTestCase {
             exp.fulfill()
             XCTAssertEqual(coinList.response, "Success")
         }) { error in
+            exp.fulfill()
             XCTFail("Error in coin list request: \(error)")
+        }
+        waitForExpectations(timeout: 3.0, handler: nil)
+    }
+    
+    func testFetchCoinListReturnsFailure () {
+        FixtureLoader.stubCoinListReturnFailure()
+        let exp = expectation(description: "Received response")
+        CryptoCompare.shared.coinList(success: { coinList in
+            exp.fulfill()
+            XCTFail("Should have returned an error")
+        }) { error in
+            exp.fulfill()
+            if case CryptoCompareError.serverError(let statusCode) = error {
+                XCTAssertEqual(statusCode, 500)
+            } else {
+                XCTFail("Expected a server error but got \(error)")
+            }
         }
         waitForExpectations(timeout: 3.0, handler: nil)
     }
