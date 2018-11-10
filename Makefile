@@ -4,13 +4,13 @@ BUILD_FLAGS = -workspace $(WORKSPACE) -scheme $(SCHEME) -destination $(DESTINATI
 SCHEME ?= $(TARGET)
 TARGET ?= CryptoCompareKit
 PLATFORM ?= iOS
-OS ?= 12.0
+OS ?= 12.1
 RELEASE ?= release
 BRANCH ?= master
 DIST_BRANCH = $(RELEASE)-dist
 
 ifeq ($(PLATFORM), iOS)
-	DESTINATION ?= 'platform=iOS Simulator,name=iPhone XR,OS=12.0'
+	DESTINATION ?= 'platform=iOS Simulator,name=iPhone XR,OS=12.1'
 endif
 
 XCPRETTY :=
