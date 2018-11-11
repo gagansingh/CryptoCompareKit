@@ -21,4 +21,6 @@ type_body_length:
   warning: 300
   error: 400
 excluded:
+  - CryptoCompareKitTests
   - Pods
+  - Demo

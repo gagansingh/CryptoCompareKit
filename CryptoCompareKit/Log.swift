@@ -9,5 +9,6 @@
 import os.log
 
 struct Log {
-    static var cryptoCompare = OSLog(subsystem: "com.spirosgerokostas.CryptoCompareKit", category: "CryptoCompare")
+    static var cryptoCompare = OSLog(subsystem: "com.spirosgerokostas.CryptoCompareKit",
+                                     category: "CryptoCompare")
 }

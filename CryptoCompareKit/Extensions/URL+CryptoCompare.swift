@@ -9,9 +9,9 @@
 import UIKit
 
 typealias Parameters = [String: Any]
-
+// swiftlint:disable force_unwrapping
 extension URL {
-    func appendingfQueryParameters(_ paramaters: Parameters) -> URL {
+    func appendingQueryParameters(_ paramaters: Parameters) -> URL {
         var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: true)!
         var items = urlComponents.queryItems ?? []
         items += paramaters.map { URLQueryItem(name: $0, value: "\($1)") }
@@ -19,6 +19,6 @@ extension URL {
         return urlComponents.url!
     }
     mutating func appendQueryParameters(_ parameters: Parameters) {
-        self = appendingfQueryParameters(parameters)
+        self = appendingQueryParameters(parameters)
     }
 }

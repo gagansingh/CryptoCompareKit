@@ -1,5 +1,5 @@
 //
-//  CryptoCompareKitTests.swift
+//  CryptoCompareCoinListTests.swift
 //  CryptoCompareKitTests
 //
 //  Created by Spiros Gerokostas on 04/11/2018.
@@ -10,15 +10,15 @@ import XCTest
 import OHHTTPStubs
 @testable import CryptoCompareKit
 
-class CryptoCompareKitTests: XCTestCase {
-    
+class CryptoCompareCoinListTests: XCTestCase {
+
     override func setUp() {
         super.setUp()
-        
+
         OHHTTPStubs.onStubMissing { request in
             XCTFail("Missing stub for \(request)")
         }
-        
+
         FixtureLoader.stubCoinListResponse()
     }
 
@@ -26,7 +26,7 @@ class CryptoCompareKitTests: XCTestCase {
         super.tearDown()
         FixtureLoader.reset()
     }
-    
+
     func testFetchCoinListResponse() {
         let exp = expectation(description: "Received response")
         CryptoCompare.shared.coinList(success: { coinList in
@@ -38,11 +38,11 @@ class CryptoCompareKitTests: XCTestCase {
         }
         waitForExpectations(timeout: 3.0, handler: nil)
     }
-    
+
     func testFetchCoinListReturnsFailure () {
         FixtureLoader.stubCoinListReturnFailure()
         let exp = expectation(description: "Received response")
-        CryptoCompare.shared.coinList(success: { coinList in
+        CryptoCompare.shared.coinList(success: { _ in
             exp.fulfill()
             XCTFail("Should have returned an error")
         }) { error in
@@ -52,6 +52,18 @@ class CryptoCompareKitTests: XCTestCase {
             } else {
                 XCTFail("Expected a server error but got \(error)")
             }
+        }
+        waitForExpectations(timeout: 3.0, handler: nil)
+    }
+
+    func testFetchCoinList() {
+        let exp = expectation(description: "Received response")
+        CryptoCompare.shared.coinList(success: { coinList in
+            exp.fulfill()
+            XCTAssertGreaterThan(coinList.data.count, 1)
+        }) { error in
+            exp.fulfill()
+            XCTFail("Error in coin list request: \(error)")
         }
         waitForExpectations(timeout: 3.0, handler: nil)
     }

@@ -19,28 +19,28 @@ extension CryptoCompare {
         request("/price", parameters: parameters, success: success, failure: failure)
     }
     public func priceMulti(_ fsyms: String,
-                      tsyms: String,
-                      success: SuccessResponse<PriceMulti>?,
-                      failure: FailureResponse?) {
+                           tsyms: String,
+                           success: SuccessResponse<PriceMulti>?,
+                           failure: FailureResponse?) {
         var parameters = Parameters()
         parameters["fsyms"] = fsyms
         parameters["tsyms"] = tsyms
         request("/pricemulti", parameters: parameters, success: success, failure: failure)
     }
     public func priceMultiFull(_ fsyms: String,
-                           tsyms: String,
-                           success: SuccessResponse<PriceMultiFull>?,
-                           failure: FailureResponse?) {
+                               tsyms: String,
+                               success: SuccessResponse<PriceMultiFull>?,
+                               failure: FailureResponse?) {
         var parameters = Parameters()
         parameters["fsyms"] = fsyms
         parameters["tsyms"] = tsyms
         request("/pricemultifull", parameters: parameters, success: success, failure: failure)
     }
-    public func priceGenerateAverage(fsym: String,
-                               tsym: String,
-                               e: String,
-                               success: SuccessResponse<PriceGenerateAverage>?,
-                               failure: FailureResponse?) {
+    public func priceGenerateAverage(_ fsym: String,
+                                     tsym: String,
+                                     e: String,
+                                     success: SuccessResponse<PriceGenerateAverage>?,
+                                     failure: FailureResponse?) {
         var parameters = Parameters()
         parameters["fsym"] = fsym
         parameters["tsym"] = tsym

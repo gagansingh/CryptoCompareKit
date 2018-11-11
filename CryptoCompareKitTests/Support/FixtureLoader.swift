@@ -14,12 +14,12 @@ class FixtureLoader {
         OHHTTPStubs.removeAllStubs()
     }
     static func stubCoinListResponse() {
-        stub(condition: isHost("min-api.cryptocompare.com") && isPath("/data/all/coinlist")) { response -> OHHTTPStubsResponse in
+        stub(condition: isHost("min-api.cryptocompare.com") && isPath("/data/all/coinlist")) { _ -> OHHTTPStubsResponse in
             return jsonFixture(with: "coinList.json")
         }
     }
     static func stubCoinListReturnFailure() {
-        stub(condition: isHost("min-api.cryptocompare.com") && isPath("/data/all/coinlist")) { response -> OHHTTPStubsResponse in
+        stub(condition: isHost("min-api.cryptocompare.com") && isPath("/data/all/coinlist")) { _ -> OHHTTPStubsResponse in
             let data = "Server error".data(using: .utf8)!
             return OHHTTPStubsResponse(data: data, statusCode: 500, headers: [:])
         }
