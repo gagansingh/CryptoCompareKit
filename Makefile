@@ -18,7 +18,7 @@ build: dependencies
 	$(XCODEBUILD) $(BUILD_FLAGS) $(XCPRETTY)
 
 test:
-	$(XCODEBUILD) test $(BUILD_FLAGS) $(XCPRETTY)
+	$(XCODEBUILD) test $(BUILD_FLAGS) -enableCodeCoverage YES $(XCPRETTY)
 
 clean:
 	$(XCODEBUILD) clean $(BUILD_FLAGS) $(XCPRETTY)
