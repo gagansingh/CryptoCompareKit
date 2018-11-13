@@ -40,4 +40,32 @@ extension CryptoCompare {
         parameters["limit"] = limit
         request("/histominute", parameters: parameters, success: success, failure: failure)
     }
+    public func historicalDay(_ fsym: String,
+                              tsyms: String,
+                              ts: Int,
+                              e: String = "",
+                              extraParams: String = "",
+                              success: SuccessResponse<[String: [String: Double]]>?,
+                              failure: FailureResponse?) {
+        var parameters = Parameters()
+        parameters["fsym"] = fsym
+        parameters["tsyms"] = tsyms
+        parameters["ts"] = ts
+        if !e.isEmpty {
+            parameters["e"] = e
+        }
+        if !extraParams.isEmpty {
+            parameters["extraParams"] = extraParams
+        }
+        request("/pricehistorical", parameters: parameters, success: success, failure: failure)
+    }
+    public func dayAvg(_ fsym: String,
+                       tsym: String,
+                       success: SuccessResponse<HistoricalDayAvg>?,
+                       failure: FailureResponse?) {
+        var parameters = Parameters()
+        parameters["fsym"] = fsym
+        parameters["tsym"] = tsym
+        request("/dayAvg", parameters: parameters, success: success, failure: failure)
+    }
 }

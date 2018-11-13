@@ -19,7 +19,19 @@ class ViewController: UIViewController {
 //        }) { error in
 //            print(error)
 //        }
-        CryptoCompare.shared.histominute("BTC", tsym: "USD", limit: 10, success: { response in
+//        CryptoCompare.shared.histominute("BTC", tsym: "USD", limit: 10, success: { response in
+//            print(response)
+//        }) { error in
+//            print(error)
+//        }
+        
+//        CryptoCompare.shared.historicalDay("BTC", tsyms: "USD", ts: 1452680400, e: "Coinbase", extraParams: "Test", success: { response in
+//            print(response)
+//        }) { error in
+//            print(error)
+//        }
+        
+        CryptoCompare.shared.dayAvg("BTC", tsym: "USD", success: { response in
             print(response)
         }) { error in
             print(error)

@@ -1,0 +1,117 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/CryptoCompare.swift",
+      "line": null,
+      "symbol": "CryptoCompare",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/CryptoCompare.swift",
+      "line": null,
+      "symbol": "CryptoCompare",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/CryptoCompare.swift",
+      "line": null,
+      "symbol": "CryptoCompare",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/CryptoCompare.swift",
+      "line": 11,
+      "symbol": "CryptoCompare",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/Coin.swift",
+      "line": 11,
+      "symbol": "Coin",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/CoinList.swift",
+      "line": 11,
+      "symbol": "CoinList",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/CryptoCompareError.swift",
+      "line": 11,
+      "symbol": "CryptoCompareError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/HistoricalTimeResponse.swift",
+      "line": 11,
+      "symbol": "HistoricalTimeResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/History.swift",
+      "line": 11,
+      "symbol": "History",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/History.swift",
+      "line": 31,
+      "symbol": "HistoricalDayAvg",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/PriceMultiFull.swift",
+      "line": 11,
+      "symbol": "PriceMultiFull",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/PriceMultiFull.swift",
+      "line": 21,
+      "symbol": "PriceGenerateAverage",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/PriceMultiFull.swift",
+      "line": 31,
+      "symbol": "AverageRaw",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/PriceMultiFull.swift",
+      "line": 53,
+      "symbol": "AverageDisplay",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/PriceMultiFull.swift",
+      "line": 74,
+      "symbol": "Raw",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit/CryptoCompareKit/Models/PriceMultiFull.swift",
+      "line": 106,
+      "symbol": "Display",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/spirosgerokostas/Development/iOS/CryptoCompareKit"
+}
