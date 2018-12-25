@@ -13,7 +13,7 @@ public class Request {
         self.task = task
     }
     
-    internal func cancel() {
+    public func cancel() {
         task?.cancel()
     }
 }
