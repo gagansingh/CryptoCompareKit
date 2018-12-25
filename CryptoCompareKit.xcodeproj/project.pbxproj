@@ -24,6 +24,7 @@
 		5698D1E6218EFD2100CD97C7 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698D1E5218EFD2100CD97C7 /* Coin.swift */; };
 		56C29E252195E3900046ACEC /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C29E242195E3900046ACEC /* History.swift */; };
 		56C29E272195E3D50046ACEC /* HistoricalTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C29E262195E3D50046ACEC /* HistoricalTimeResponse.swift */; };
+		56DE146F21D218FA0022B1A9 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DE146E21D218FA0022B1A9 /* Request.swift */; };
 		56ED5B6A2190CC1A001F94A0 /* Historical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED5B692190CC1A001F94A0 /* Historical.swift */; };
 		F564B77AF3B85396393B24A1 /* Pods_CryptoCompareKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52ECE8EC02D311CA639ADE10 /* Pods_CryptoCompareKitTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		5698D1E5218EFD2100CD97C7 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		56C29E242195E3900046ACEC /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		56C29E262195E3D50046ACEC /* HistoricalTimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalTimeResponse.swift; sourceTree = "<group>"; };
+		56DE146E21D218FA0022B1A9 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		56ED5B692190CC1A001F94A0 /* Historical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historical.swift; sourceTree = "<group>"; };
 		58A12D9F233D2E34C0540BCC /* Pods-CryptoCompareKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCompareKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCompareKitTests/Pods-CryptoCompareKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD6B71C551FF20E3867A6CCB /* Pods-CryptoCompareKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCompareKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCompareKit/Pods-CryptoCompareKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				5698D1C1218EFC8E00CD97C7 /* CryptoCompareKit.h */,
 				5698D1C2218EFC8E00CD97C7 /* Info.plist */,
 				561D94E0219732400080F6C1 /* Log.swift */,
+				56DE146E21D218FA0022B1A9 /* Request.swift */,
 			);
 			path = CryptoCompareKit;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5609F7C0218F2758005F08C1 /* PriceMultiFull.swift in Sources */,
+				56DE146F21D218FA0022B1A9 /* Request.swift in Sources */,
 				56C29E272195E3D50046ACEC /* HistoricalTimeResponse.swift in Sources */,
 				561D94E1219732400080F6C1 /* Log.swift in Sources */,
 				5698D1E1218EFCDC00CD97C7 /* CryptoCompare.swift in Sources */,

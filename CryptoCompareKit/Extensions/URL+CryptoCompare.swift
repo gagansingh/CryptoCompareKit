@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias Parameters = [String: Any]
+public typealias Parameters = [String: Any]
 // swiftlint:disable force_unwrapping
 extension URL {
     func appendingQueryParameters(_ paramaters: Parameters) -> URL {

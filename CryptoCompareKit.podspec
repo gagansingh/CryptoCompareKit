@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CryptoCompareKit"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "A CryptoCompare API client written in Swift."
   s.description  = <<-DESC
                       CryptoCompareKit is a wrapper for the CryptoCompare API written in swift.

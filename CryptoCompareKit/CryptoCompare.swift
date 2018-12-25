@@ -17,7 +17,7 @@ public class CryptoCompare {
         static let baseURL = "https://min-api.cryptocompare.com/data"
     }
 
-    enum HTTPMethod: String {
+    public enum HTTPMethod: String {
         case get = "GET"
     }
 
@@ -27,13 +27,14 @@ public class CryptoCompare {
 
     private init() {}
 
-    internal func request<T: Decodable>(_ endpoint: String,
+    @discardableResult
+    public func request<T: Decodable>(_ endpoint: String,
                                         method: HTTPMethod = .get,
                                         parameters: Parameters = [:],
                                         success: SuccessResponse<T>?,
-                                        failure: FailureResponse?) {
+                                        failure: FailureResponse?) -> Request? {
         if let urlRequest = buildURLRequest(endpoint, method: method, parameters: parameters) {
-            urlSession.dataTask(with: urlRequest) { data, response, error in
+            let task = urlSession.dataTask(with: urlRequest) { data, response, error in
                 if let error = error {
                     failure?(error)
                 } else {
@@ -50,7 +51,6 @@ public class CryptoCompare {
                                             success?(object)
                                         }
                                     } catch let error {
-                                        print(error)
                                         DispatchQueue.main.async {
                                             failure?(CryptoCompareError.decoding(message:
                                                 error.localizedDescription))
@@ -63,8 +63,11 @@ public class CryptoCompare {
                         }
                     }
                 }
-            }.resume()
+            }
+            task.resume()
+            return Request(task: task)
         }
+        return nil
     }
 
     private func buildURLRequest(_ endpoint: String,
