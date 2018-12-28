@@ -11,10 +11,10 @@ import OHHTTPStubs
 @testable import CryptoCompareKit
 
 class CryptoCompareCoinListTests: XCTestCase {
-
+    
     override func setUp() {
         super.setUp()
-
+        
         OHHTTPStubs.onStubMissing { request in
             XCTFail("Missing stub for \(request)")
         }
@@ -29,7 +29,8 @@ class CryptoCompareCoinListTests: XCTestCase {
 
     func testFetchCoinListResponse() {
         let exp = expectation(description: "Received response")
-        CryptoCompare.shared.coinList(success: { coinList in
+        
+        CryptoCompare.shared.coinlist(success: { coinList in
             exp.fulfill()
             XCTAssertEqual(coinList.response, "Success")
         }) { error in
@@ -42,7 +43,7 @@ class CryptoCompareCoinListTests: XCTestCase {
     func testFetchCoinListReturnsFailure () {
         FixtureLoader.stubCoinListReturnFailure()
         let exp = expectation(description: "Received response")
-        CryptoCompare.shared.coinList(success: { _ in
+        CryptoCompare.shared.coinlist(success: { _ in
             exp.fulfill()
             XCTFail("Should have returned an error")
         }) { error in
@@ -58,7 +59,7 @@ class CryptoCompareCoinListTests: XCTestCase {
 
     func testFetchCoinList() {
         let exp = expectation(description: "Received response")
-        CryptoCompare.shared.coinList(success: { coinList in
+        CryptoCompare.shared.coinlist(success: { coinList in
             exp.fulfill()
             XCTAssertGreaterThan(coinList.data.count, 1)
         }) { error in

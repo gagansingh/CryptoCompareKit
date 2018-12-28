@@ -1,5 +1,5 @@
 //
-//  CoinsList.swift
+//  List.swift
 //  CryptoCompareKit
 //
 //  Created by Spiros Gerokostas on 04/11/2018.
@@ -7,7 +7,8 @@
 //
 // swiftlint:disable force_unwrapping
 extension CryptoCompare {
-    public func coinList(success: SuccessResponse<CoinList>?,
+    @discardableResult
+    public func coinlist(success: SuccessResponse<CoinList>?,
                          failure: FailureResponse?) -> Request {
         return request("/all/coinlist", success: success, failure: failure)!
     }

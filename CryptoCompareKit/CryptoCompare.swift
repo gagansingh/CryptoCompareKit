@@ -9,6 +9,8 @@
 import os.log
 
 public class CryptoCompare {
+    
+    public static var apiKey: String = ""
 
     public typealias SuccessResponse<T> = (_ data: T) -> Void
     public typealias FailureResponse = (_ error: Error) -> Void
@@ -76,6 +78,9 @@ public class CryptoCompare {
         if let url = URL(string: API.baseURL + endpoint) {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = method.rawValue
+            if !CryptoCompare.apiKey.isEmpty {
+                urlRequest.url?.appendQueryParameters(["api_key": CryptoCompare.apiKey])
+            }
             switch method {
             case .get:
                 urlRequest.url?.appendQueryParameters(parameters)

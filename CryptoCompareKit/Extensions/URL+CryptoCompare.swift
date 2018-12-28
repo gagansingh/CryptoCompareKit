@@ -11,6 +11,7 @@ import UIKit
 public typealias Parameters = [String: Any]
 // swiftlint:disable force_unwrapping
 extension URL {
+    @discardableResult
     func appendingQueryParameters(_ paramaters: Parameters) -> URL {
         var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: true)!
         var items = urlComponents.queryItems ?? []

@@ -14,11 +14,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        CryptoCompare.shared.coinList(success: { coinList in
-//            print(coinList)
-//        }) { error in
-//            print(error)
-//        }
+        CryptoCompare.shared.coinlist(success: { coinList in
+            print(coinList)
+        }) { error in
+            print(error)
+        }
 //        CryptoCompare.shared.histominute("BTC", tsym: "USD", limit: 10, success: { response in
 //            print(response)
 //        }) { error in
@@ -31,10 +31,10 @@ class ViewController: UIViewController {
 //            print(error)
 //        }
         
-        CryptoCompare.shared.dayAvg("BTC", tsym: "USD", success: { response in
-            print(response)
-        }) { error in
-            print(error)
-        }
+//        CryptoCompare.shared.dayAvg("BTC", tsym: "USD", success: { response in
+//            print(response)
+//        }) { error in
+//            print(error)
+//        }
     }
 }
