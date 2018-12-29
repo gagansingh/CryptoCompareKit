@@ -19,14 +19,21 @@ extension CryptoCompare {
     /// - Parameter tsyms: Comma separated cryptocurrency symbols list to convert into [Max character length: 500].
     /// - Parameter success: The callback called after a successful response.
     /// - Parameter failure: The callback called after an incorect response.
+    @discardableResult
     public func price(_ fsym: String,
                       tsyms: String,
                       success: SuccessResponse<Price>?,
-                      failure: FailureResponse?) {
+                      failure: FailureResponse?) -> Request? {
         var parameters = Parameters()
         parameters["fsym"] = fsym
         parameters["tsyms"] = tsyms
-        request("/price", parameters: parameters, success: success, failure: failure)
+        if let request = request("/price",
+                                 parameters: parameters,
+                                 success: success,
+                                 failure: failure) {
+            return request
+        }
+        return nil
     }
     
     /// Same as single API path but with multiple from symbols.
