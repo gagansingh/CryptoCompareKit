@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CryptoCompareKit"
-  s.version      = "1.0"
+  s.version      = "1.0.1"
   s.summary      = "A CryptoCompare API client written in Swift."
   s.description  = <<-DESC
                       CryptoCompareKit is a wrapper for the CryptoCompare API written in swift.
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.authors            = { "Spiros Gerokostas" => "spiros.gerokostas@gmail.com" }
   s.social_media_url   = "http://twitter.com/sger"
   s.source             = { :git => "https://github.com/sger/CryptoCompareKit.git", :tag => "#{s.version}" }
-  s.source_files       = 'CryptoCompareKit/*.swift', 'CryptoCompareKit/**/*.swift'
   s.platform           = :ios, '10.0'
+  s.source_files = 'Source/*.swift'
   s.swift_version      = "4.2"
 end

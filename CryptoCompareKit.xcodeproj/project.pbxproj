@@ -101,7 +101,7 @@
 		5698D1B4218EFC8E00CD97C7 = {
 			isa = PBXGroup;
 			children = (
-				5698D1C0218EFC8E00CD97C7 /* CryptoCompareKit */,
+				5698D1C0218EFC8E00CD97C7 /* Source */,
 				5698D1CB218EFC8E00CD97C7 /* CryptoCompareKitTests */,
 				5698D1BF218EFC8E00CD97C7 /* Products */,
 				F9177640A041BB1FD5657A6F /* Pods */,
@@ -118,7 +118,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5698D1C0218EFC8E00CD97C7 /* CryptoCompareKit */ = {
+		5698D1C0218EFC8E00CD97C7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				5698D1DA218EFCDC00CD97C7 /* CryptoCompare.swift */,
@@ -130,7 +130,7 @@
 				561D94E0219732400080F6C1 /* Log.swift */,
 				56D1698721DA32A700961342 /* CryptoCompareRequest.swift */,
 			);
-			path = CryptoCompareKit;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		5698D1CB218EFC8E00CD97C7 /* CryptoCompareKitTests */ = {
@@ -547,7 +547,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CryptoCompareKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -576,7 +576,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CryptoCompareKit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
