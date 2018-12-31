@@ -9,7 +9,7 @@
 extension CryptoCompare {
     @discardableResult
     public func coinlist(success: SuccessResponse<CoinList>?,
-                         failure: FailureResponse?) -> Request {
+                         failure: FailureResponse?) -> CryptoCompareRequest {
         return request("/all/coinlist", success: success, failure: failure)!
     }
 }

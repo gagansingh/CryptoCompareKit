@@ -23,7 +23,7 @@ extension CryptoCompare {
     public func price(_ fsym: String,
                       tsyms: String,
                       success: SuccessResponse<Price>?,
-                      failure: FailureResponse?) -> Request? {
+                      failure: FailureResponse?) -> CryptoCompareRequest? {
         var parameters = Parameters()
         parameters["fsym"] = fsym
         parameters["tsyms"] = tsyms

@@ -34,7 +34,7 @@ public class CryptoCompare {
                                         method: HTTPMethod = .get,
                                         parameters: Parameters = [:],
                                         success: SuccessResponse<T>?,
-                                        failure: FailureResponse?) -> Request? {
+                                        failure: FailureResponse?) -> CryptoCompareRequest? {
         if let urlRequest = buildURLRequest(endpoint, method: method, parameters: parameters) {
             let task = urlSession.dataTask(with: urlRequest) { data, response, error in
                 if let error = error {
@@ -67,7 +67,7 @@ public class CryptoCompare {
                 }
             }
             task.resume()
-            return Request(task: task)
+            return CryptoCompareRequest(task: task)
         }
         return nil
     }
