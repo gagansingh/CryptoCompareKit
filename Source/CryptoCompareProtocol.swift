@@ -10,7 +10,7 @@ import UIKit
 
 public protocol CryptoCompareProtocol {
     func coinlist(completionHandler: (@escaping (Result<CoinList, Error>) -> Void))
-        -> CryptoCompareRequest
+        -> CryptoCompareRequest?
 
     func price(_ fsym: String,
                tsyms: String,

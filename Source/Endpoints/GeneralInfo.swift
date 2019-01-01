@@ -9,7 +9,7 @@
 extension CryptoCompare {
     @discardableResult
     public func coinlist(completionHandler: (@escaping (Result<CoinList, Error>) -> Void))
-        -> CryptoCompareRequest {
+        -> CryptoCompareRequest? {
         return request("/all/coinlist", completionHandler: completionHandler)!
     }
 }
