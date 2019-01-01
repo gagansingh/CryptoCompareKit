@@ -8,12 +8,14 @@
 
 import os.log
 
-public class CryptoCompare {
-    
-    public static var apiKey: String = ""
+public enum Result<Value, Error> {
+    case success(Value)
+    case failure(Error)
+}
 
-    public typealias SuccessResponse<T> = (_ data: T) -> Void
-    public typealias FailureResponse = (_ error: Error) -> Void
+public class CryptoCompare: CryptoCompareProtocol {
+
+    public static var apiKey: String = ""
 
     private enum API {
         static let baseURL = "https://min-api.cryptocompare.com/data"
@@ -31,14 +33,14 @@ public class CryptoCompare {
 
     @discardableResult
     public func request<T: Decodable>(_ endpoint: String,
-                                        method: HTTPMethod = .get,
-                                        parameters: Parameters = [:],
-                                        success: SuccessResponse<T>?,
-                                        failure: FailureResponse?) -> CryptoCompareRequest? {
+                                      method: HTTPMethod = .get,
+                                      parameters: Parameters = [:],
+                                      completionHandler: (@escaping (Result<T, Error>) -> Void))
+        -> CryptoCompareRequest? {
         if let urlRequest = buildURLRequest(endpoint, method: method, parameters: parameters) {
             let task = urlSession.dataTask(with: urlRequest) { data, response, error in
                 if let error = error {
-                    failure?(error)
+                    completionHandler(.failure(error))
                 } else {
                     if let http = response as? HTTPURLResponse {
                         switch http.statusCode {
@@ -50,18 +52,19 @@ public class CryptoCompare {
                                         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                                         let object = try jsonDecoder.decode(T.self, from: data)
                                         DispatchQueue.main.async {
-                                            success?(object)
+                                            completionHandler(.success(object))
                                         }
                                     } catch let error {
                                         DispatchQueue.main.async {
-                                            failure?(CryptoCompareError.decoding(message:
-                                                error.localizedDescription))
+                                            completionHandler(.failure(CryptoCompareError.decoding(message:
+                                              error.localizedDescription)))
                                         }
                                     }
                                 }
                             }
                         default:
-                            failure?(CryptoCompareError.serverError(statusCode: http.statusCode))
+                            completionHandler(.failure(
+                                CryptoCompareError.serverError(statusCode: http.statusCode)))
                         }
                     }
                 }

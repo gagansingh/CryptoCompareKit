@@ -8,7 +8,6 @@
 
 import UIKit
 
-public typealias Parameters = [String: Any]
 // swiftlint:disable force_unwrapping
 extension URL {
     @discardableResult

@@ -30,42 +30,56 @@ class CryptoCompareCoinListTests: XCTestCase {
     func testFetchCoinListResponse() {
         let exp = expectation(description: "Received response")
         
-        CryptoCompare.shared.coinlist(success: { coinList in
-            exp.fulfill()
-            XCTAssertEqual(coinList.response, "Success")
-        }) { error in
-            exp.fulfill()
-            XCTFail("Error in coin list request: \(error)")
+        CryptoCompare.shared.coinlist { result in
+            switch result {
+            case let .success(coinList):
+                exp.fulfill()
+                XCTAssertEqual(coinList.response, "Success")
+            case let .failure(error):
+                exp.fulfill()
+                XCTFail("Error in coin list request: \(error)")
+            }
         }
+        
         waitForExpectations(timeout: 3.0, handler: nil)
     }
 
     func testFetchCoinListReturnsFailure () {
         FixtureLoader.stubCoinListReturnFailure()
         let exp = expectation(description: "Received response")
-        CryptoCompare.shared.coinlist(success: { _ in
-            exp.fulfill()
-            XCTFail("Should have returned an error")
-        }) { error in
-            exp.fulfill()
-            if case CryptoCompareError.serverError(let statusCode) = error {
-                XCTAssertEqual(statusCode, 500)
-            } else {
-                XCTFail("Expected a server error but got \(error)")
+        
+        CryptoCompare.shared.coinlist { result in
+            switch result {
+            case .success(_):
+                exp.fulfill()
+                XCTFail("Should have returned an error")
+            case let .failure(error):
+                exp.fulfill()
+                if case CryptoCompareError.serverError(let statusCode) = error {
+                    XCTAssertEqual(statusCode, 500)
+                } else {
+                    XCTFail("Expected a server error but got \(error)")
+                }
             }
         }
+        
         waitForExpectations(timeout: 3.0, handler: nil)
     }
 
     func testFetchCoinList() {
         let exp = expectation(description: "Received response")
-        CryptoCompare.shared.coinlist(success: { coinList in
-            exp.fulfill()
-            XCTAssertGreaterThan(coinList.data.count, 1)
-        }) { error in
-            exp.fulfill()
-            XCTFail("Error in coin list request: \(error)")
+        
+        CryptoCompare.shared.coinlist { result in
+            switch result {
+            case let .success(coinList):
+                exp.fulfill()
+                XCTAssertGreaterThan(coinList.data.count, 1)
+            case let .failure(error):
+                exp.fulfill()
+                XCTFail("Error in coin list request: \(error)")
+            }
         }
+        
         waitForExpectations(timeout: 3.0, handler: nil)
     }
 }

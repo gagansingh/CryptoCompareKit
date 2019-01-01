@@ -8,8 +8,8 @@
 // swiftlint:disable force_unwrapping
 extension CryptoCompare {
     @discardableResult
-    public func coinlist(success: SuccessResponse<CoinList>?,
-                         failure: FailureResponse?) -> CryptoCompareRequest {
-        return request("/all/coinlist", success: success, failure: failure)!
+    public func coinlist(completionHandler: (@escaping (Result<CoinList, Error>) -> Void))
+        -> CryptoCompareRequest {
+        return request("/all/coinlist", completionHandler: completionHandler)!
     }
 }

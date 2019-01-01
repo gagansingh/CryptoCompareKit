@@ -10,11 +10,11 @@ import UIKit
 
 public final class CryptoCompareRequest: NSObject {
     private weak var task: URLSessionDataTask?
-    
+
     init(task: URLSessionDataTask) {
         self.task = task
     }
-    
+
     public func cancel() {
         task?.cancel()
     }
