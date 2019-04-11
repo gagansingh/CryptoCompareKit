@@ -43,6 +43,10 @@ public struct HistoricalDayAvg: Decodable {
         static func == (lhs: Key, rhs: Key) -> Bool {
             return lhs.stringValue == rhs.stringValue
         }
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(stringValue)
+        }
 
         let stringValue: String
         init(_ string: String) { self.stringValue = string }

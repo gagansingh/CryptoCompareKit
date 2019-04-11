@@ -266,10 +266,11 @@
 				TargetAttributes = {
 					5698D1BD218EFC8E00CD97C7 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					5698D1C6218EFC8E00CD97C7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -279,6 +280,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 5698D1B4218EFC8E00CD97C7;
 			productRefGroup = 5698D1BF218EFC8E00CD97C7 /* Products */;
@@ -340,7 +342,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompareKitTests/Pods-CryptoCompareKitTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoCompareKitTests/Pods-CryptoCompareKitTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -351,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCompareKitTests/Pods-CryptoCompareKitTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoCompareKitTests/Pods-CryptoCompareKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3675BA95FF62829C5732853 /* [CP] Check Pods Manifest.lock */ = {
@@ -567,7 +569,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -595,7 +597,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.spirosgerokostas.CryptoCompareKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -615,7 +617,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spirosgerokostas.CryptoCompareKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -635,7 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spirosgerokostas.CryptoCompareKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
