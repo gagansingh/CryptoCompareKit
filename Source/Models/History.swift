@@ -38,7 +38,7 @@ public struct HistoricalDayAvg: Decodable {
             return stringValue
         }
 
-        var hashValue: Int { return stringValue.hash }
+//        var hashValue: Int { return stringValue.hash }
 
         static func == (lhs: Key, rhs: Key) -> Bool {
             return lhs.stringValue == rhs.stringValue
