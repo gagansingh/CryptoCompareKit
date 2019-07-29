@@ -1,28 +1,16 @@
-// swift-tools-version:5.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version:4.2
 import PackageDescription
 
 let package = Package(
     name: "CryptoCompareKit",
+    // platforms: [.iOS("10.0"), .macOS("10.12"), tvOS("10.0"), .watchOS("3.0")],
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "CryptoCompareKit",
-            targets: ["CryptoCompareKit"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .library(name: "CryptoCompareKit", targets: ["CryptoCompareKit"])
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "CryptoCompareKit",
-            dependencies: []),
-        .testTarget(
-            name: "CryptoCompareKitTests",
-            dependencies: ["CryptoCompareKit"]),
+            path: "Source"
+        )
     ]
 )
