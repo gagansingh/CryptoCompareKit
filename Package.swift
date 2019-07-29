@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "CryptoCompareKit", targets: ["CryptoCompareKit"])
     ],
     targets: [
-        .target(name: "CryptoCompareKit", path: "Source"),
+        .target(name: "CryptoCompareKit"),
         .testTarget(name: "CryptoCompareKitTests", dependencies: ["CryptoCompareKit"])
     ]
 )
