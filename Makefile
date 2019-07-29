@@ -45,6 +45,5 @@ documentation:
         --theme fullwidth \
         --output ./docs \
         --documentation=./*.md
-    @rm -rf ./build
 
 .PHONY: test clean dependencies lint cocoapods
