@@ -38,4 +38,13 @@ cocoapods:
 lint:
 	swiftlint lint --reporter json --strict
 
+documentation:
+    @jazzy \
+        --min-acl internal \
+        --no-hide-documentation-coverage \
+        --theme fullwidth \
+        --output ./docs \
+        --documentation=./*.md
+    @rm -rf ./build
+
 .PHONY: test clean dependencies lint cocoapods
