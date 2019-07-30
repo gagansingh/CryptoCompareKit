@@ -39,3 +39,8 @@ jobs:
         on:
           branch: master
 
+    - stage: deploy
+      script: pod trunk push --verbose
+      on:
+        tags: true
+
