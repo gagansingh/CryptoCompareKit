@@ -4,88 +4,156 @@
     <title>HistoricalDayAvg Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Struct/HistoricalDayAvg" class="dashAnchor"></a>
+
     <a title="HistoricalDayAvg Structure Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">CryptoCompareKit Docs</a> (3% documented)</p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">CryptoCompareKit Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        HistoricalDayAvg Structure Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          CryptoCompareKit Docs
+        </a>
+         (3% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">CryptoCompareKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      HistoricalDayAvg Structure Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/CryptoCompare.html">CryptoCompare</a>
+                <a class="nav-group-task-link" href="../readme.html">README</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/CryptoCompareError.html">CryptoCompareError</a>
+                <a class="nav-group-task-link" href="../Classes/CryptoCompare.html">CryptoCompare</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CryptoCompare/HTTPMethod.html">– HTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CryptoCompareRequest.html">CryptoCompareRequest</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/AverageDisplay.html">AverageDisplay</a>
+                <a class="nav-group-task-link" href="../Enums/CryptoCompareError.html">CryptoCompareError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/AverageRaw.html">AverageRaw</a>
+                <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CryptoCompareProtocol.html">CryptoCompareProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AverageDisplay.html">AverageDisplay</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Coin.html">Coin</a>
+                <a class="nav-group-task-link" href="../Structs/AverageRaw.html">AverageRaw</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CoinList.html">CoinList</a>
+                <a class="nav-group-task-link" href="../Structs/Coin.html">Coin</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Display.html">Display</a>
+                <a class="nav-group-task-link" href="../Structs/CoinList.html">CoinList</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/HistoricalDayAvg.html">HistoricalDayAvg</a>
+                <a class="nav-group-task-link" href="../Structs/Display.html">Display</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a>
+                <a class="nav-group-task-link" href="../Structs/HistoricalDayAvg.html">HistoricalDayAvg</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/History.html">History</a>
+                <a class="nav-group-task-link" href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PriceGenerateAverage.html">PriceGenerateAverage</a>
+                <a class="nav-group-task-link" href="../Structs/History.html">History</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PriceMultiFull.html">PriceMultiFull</a>
+                <a class="nav-group-task-link" href="../Structs/Log.html">Log</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Raw.html">Raw</a>
+                <a class="nav-group-task-link" href="../Structs/PriceGenerateAverage.html">PriceGenerateAverage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PriceMultiFull.html">PriceMultiFull</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Raw.html">Raw</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16CryptoCompareKit10Parametersa">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16CryptoCompareKit5Pricea">Price</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16CryptoCompareKit10PriceMultia">PriceMulti</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>HistoricalDayAvg</h1>
               <div class="declaration">
                 <div class="language">
@@ -95,10 +163,13 @@
               </div>
             <p>Undocumented</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -181,14 +252,15 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/sger/CryptoCompareKit" target="_blank" rel="external">Spiros Gerokostas</a>. All rights reserved. (Last updated: 2018-11-13)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://github.com/sger/CryptoCompareKit" target="_blank" rel="external">Spiros Gerokostas</a>. All rights reserved. (Last updated: 2019-07-30)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>

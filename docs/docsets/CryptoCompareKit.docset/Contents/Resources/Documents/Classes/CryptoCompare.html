@@ -4,107 +4,178 @@
     <title>CryptoCompare Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Class/CryptoCompare" class="dashAnchor"></a>
+
     <a title="CryptoCompare Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">CryptoCompareKit Docs</a> (3% documented)</p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">CryptoCompareKit Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        CryptoCompare Class Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          CryptoCompareKit Docs
+        </a>
+         (3% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">CryptoCompareKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      CryptoCompare Class Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/CryptoCompare.html">CryptoCompare</a>
+                <a class="nav-group-task-link" href="../readme.html">README</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/CryptoCompareError.html">CryptoCompareError</a>
+                <a class="nav-group-task-link" href="../Classes/CryptoCompare.html">CryptoCompare</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CryptoCompare/HTTPMethod.html">– HTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/CryptoCompareRequest.html">CryptoCompareRequest</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/AverageDisplay.html">AverageDisplay</a>
+                <a class="nav-group-task-link" href="../Enums/CryptoCompareError.html">CryptoCompareError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/AverageRaw.html">AverageRaw</a>
+                <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/CryptoCompareProtocol.html">CryptoCompareProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AverageDisplay.html">AverageDisplay</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Coin.html">Coin</a>
+                <a class="nav-group-task-link" href="../Structs/AverageRaw.html">AverageRaw</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/CoinList.html">CoinList</a>
+                <a class="nav-group-task-link" href="../Structs/Coin.html">Coin</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Display.html">Display</a>
+                <a class="nav-group-task-link" href="../Structs/CoinList.html">CoinList</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/HistoricalDayAvg.html">HistoricalDayAvg</a>
+                <a class="nav-group-task-link" href="../Structs/Display.html">Display</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a>
+                <a class="nav-group-task-link" href="../Structs/HistoricalDayAvg.html">HistoricalDayAvg</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/History.html">History</a>
+                <a class="nav-group-task-link" href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PriceGenerateAverage.html">PriceGenerateAverage</a>
+                <a class="nav-group-task-link" href="../Structs/History.html">History</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PriceMultiFull.html">PriceMultiFull</a>
+                <a class="nav-group-task-link" href="../Structs/Log.html">Log</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Raw.html">Raw</a>
+                <a class="nav-group-task-link" href="../Structs/PriceGenerateAverage.html">PriceGenerateAverage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/PriceMultiFull.html">PriceMultiFull</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Raw.html">Raw</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16CryptoCompareKit10Parametersa">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16CryptoCompareKit5Pricea">Price</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16CryptoCompareKit10PriceMultia">PriceMulti</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>CryptoCompare</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CryptoCompare</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CryptoCompare</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/CryptoCompareProtocol.html">CryptoCompareProtocol</a></span></code></pre>
 
                 </div>
               </div>
             <p>Undocumented</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C15SuccessResponsea"></a>
-                    <a name="//apple_ref/swift/Alias/SuccessResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a>
+                    <a name="/s:16CryptoCompareKit0aB0C6apiKeySSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/apiKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C6apiKeySSvpZ">apiKey</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -119,7 +190,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SuccessResponse</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -129,9 +200,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C15FailureResponsea"></a>
-                    <a name="//apple_ref/swift/Alias/FailureResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a>
+                    <a name="/s:16CryptoCompareKit0aB0C10HTTPMethodO"></a>
+                    <a name="//apple_ref/swift/Enum/HTTPMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C10HTTPMethodO">HTTPMethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -141,12 +212,13 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                        <a href="../Classes/CryptoCompare/HTTPMethod.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">FailureResponse</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HTTPMethod</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -180,16 +252,81 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C10histodaily_4tsym5limit7success7failureySS_SSSiyAA22HistoricalTimeResponseVcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/histodaily(_:tsym:limit:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C10histodaily_4tsym5limit7success7failureySS_SSSiyAA22HistoricalTimeResponseVcSgys5Error_pcSgtF">histodaily(_:tsym:limit:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C7request_6method10parameters17completionHandlerAA0aB7RequestCSgSS_AC10HTTPMethodOSDySSypGyAA6ResultOyxs5Error_pGctSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/request(_:method:parameters:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C7request_6method10parameters17completionHandlerAA0aB7RequestCSgSS_AC10HTTPMethodOSDySSypGyAA6ResultOyxs5Error_pGctSeRzlF">request(_:method:parameters:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">request</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                  <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare/HTTPMethod.html">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">get</span><span class="p">,</span>
+                                  <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:16CryptoCompareKit10Parametersa">Parameters</a></span> <span class="o">=</span> <span class="p">[:],</span>
+                                  <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CryptoCompareRequest.html">CryptoCompareRequest</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CryptoCompareKit0aB0C8coinlist17completionHandlerAA0aB7RequestCSgyAA6ResultOyAA8CoinListVs5Error_pGc_tF"></a>
+                    <a name="//apple_ref/swift/Method/coinlist(completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C8coinlist17completionHandlerAA0aB7RequestCSgyAA6ResultOyAA8CoinListVs5Error_pGc_tF">coinlist(completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">coinlist</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CoinList.html">CoinList</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CryptoCompareRequest.html">CryptoCompareRequest</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CryptoCompareKit0aB0C10histodaily_4tsym5limit17completionHandlerySS_SSSiyAA6ResultOyAA22HistoricalTimeResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/histodaily(_:tsym:limit:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C10histodaily_4tsym5limit17completionHandlerySS_SSSiyAA6ResultOyAA22HistoricalTimeResponseVs5Error_pGctF">histodaily(_:tsym:limit:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -207,8 +344,7 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">histodaily</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                        <span class="nv">tsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                        <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                       <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a></span><span class="o">&gt;</span><span class="p">?,</span>
-                       <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                       <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -218,9 +354,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C11histohourly_4tsym5limit7success7failureySS_SSSiyAA22HistoricalTimeResponseVcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/histohourly(_:tsym:limit:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C11histohourly_4tsym5limit7success7failureySS_SSSiyAA22HistoricalTimeResponseVcSgys5Error_pcSgtF">histohourly(_:tsym:limit:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C11histohourly_4tsym5limit17completionHandlerySS_SSSiyAA6ResultOyAA22HistoricalTimeResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/histohourly(_:tsym:limit:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C11histohourly_4tsym5limit17completionHandlerySS_SSSiyAA6ResultOyAA22HistoricalTimeResponseVs5Error_pGctF">histohourly(_:tsym:limit:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -238,8 +374,7 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">histohourly</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                         <span class="nv">tsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                         <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                        <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a></span><span class="o">&gt;</span><span class="p">?,</span>
-                        <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -249,9 +384,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C11histominute_4tsym5limit7success7failureySS_SSSiyAA22HistoricalTimeResponseVcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/histominute(_:tsym:limit:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C11histominute_4tsym5limit7success7failureySS_SSSiyAA22HistoricalTimeResponseVcSgys5Error_pcSgtF">histominute(_:tsym:limit:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C11histominute_4tsym5limit17completionHandlerySS_SSSiyAA6ResultOyAA22HistoricalTimeResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/histominute(_:tsym:limit:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C11histominute_4tsym5limit17completionHandlerySS_SSSiyAA6ResultOyAA22HistoricalTimeResponseVs5Error_pGctF">histominute(_:tsym:limit:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -269,8 +404,7 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">histominute</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                         <span class="nv">tsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                         <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-                        <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a></span><span class="o">&gt;</span><span class="p">?,</span>
-                        <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HistoricalTimeResponse.html">HistoricalTimeResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -280,9 +414,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C13historicalDay_5tsyms2ts1e11extraParams7success7failureySS_SSSiS2SySDySSSDySSSdGGcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/historicalDay(_:tsyms:ts:e:extraParams:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C13historicalDay_5tsyms2ts1e11extraParams7success7failureySS_SSSiS2SySDySSSDySSSdGGcSgys5Error_pcSgtF">historicalDay(_:tsyms:ts:e:extraParams:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C13historicalDay_5tsyms2ts1e11extraParams17completionHandlerySS_SSSiS2SyAA6ResultOySDySSSDySSSdGGs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/historicalDay(_:tsyms:ts:e:extraParams:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C13historicalDay_5tsyms2ts1e11extraParams17completionHandlerySS_SSSiS2SyAA6ResultOySDySSSDySSSdGGs5Error_pGctF">historicalDay(_:tsyms:ts:e:extraParams:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -302,8 +436,8 @@
                           <span class="nv">ts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                           <span class="nv">e</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
                           <span class="nv">extraParams</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
-                          <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Double</span><span class="p">]]</span><span class="o">&gt;</span><span class="p">?,</span>
-                          <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                          <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Double</span><span class="p">]],</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -313,9 +447,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C6dayAvg_4tsym7success7failureySS_SSyAA013HistoricalDayE0VcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/dayAvg(_:tsym:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C6dayAvg_4tsym7success7failureySS_SSyAA013HistoricalDayE0VcSgys5Error_pcSgtF">dayAvg(_:tsym:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C6dayAvg_4tsym17completionHandlerySS_SSyAA6ResultOyAA013HistoricalDayE0Vs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/dayAvg(_:tsym:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C6dayAvg_4tsym17completionHandlerySS_SSyAA6ResultOyAA013HistoricalDayE0Vs5Error_pGctF">dayAvg(_:tsym:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -332,39 +466,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dayAvg</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                    <span class="nv">tsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                   <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HistoricalDayAvg.html">HistoricalDayAvg</a></span><span class="o">&gt;</span><span class="p">?,</span>
-                   <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16CryptoCompareKit0aB0C8coinList7success7failureyyAA04CoinE0VcSg_ys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/coinList(success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C8coinList7success7failureyyAA04CoinE0VcSg_ys5Error_pcSgtF">coinList(success:failure:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">coinList</span><span class="p">(</span><span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/CoinList.html">CoinList</a></span><span class="o">&gt;</span><span class="p">?,</span> <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                   <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/HistoricalDayAvg.html">HistoricalDayAvg</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -381,67 +483,13 @@
                   <h3 class="section-name">Price Endpoints</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C5Pricea"></a>
-                    <a name="//apple_ref/swift/Alias/Price" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C5Pricea">Price</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Price</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Double</span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16CryptoCompareKit0aB0C10PriceMultia"></a>
-                    <a name="//apple_ref/swift/Alias/PriceMulti" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C10PriceMultia">PriceMulti</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">PriceMulti</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Double</span><span class="p">]]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16CryptoCompareKit0aB0C5price_5tsyms7success7failureySS_SSySDySSSdGcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/price(_:tsyms:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C5price_5tsyms7success7failureySS_SSySDySSSdGcSgys5Error_pcSgtF">price(_:tsyms:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C5price_5tsyms17completionHandlerAA0aB7RequestCSgSS_SSyAA6ResultOySDySSSdGs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/price(_:tsyms:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C5price_5tsyms17completionHandlerAA0aB7RequestCSgSS_SSyAA6ResultOySDySSSdGs5Error_pGctF">price(_:tsyms:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -456,10 +504,11 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">price</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">price</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                   <span class="nv">tsyms</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                  <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C5Pricea">Price</a></span><span class="o">&gt;</span><span class="p">?,</span>
-                  <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                  <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:16CryptoCompareKit5Pricea">Price</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CryptoCompareRequest.html">CryptoCompareRequest</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -487,7 +536,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Comma separated cryptocurrency symbols list to convert into [Max character length: 500].</p>
+                                  <p>Comma separated cryptocurrency symbols list
+to convert into [Max character length: 500].</p>
                                 </div>
                               </td>
                             </tr>
@@ -524,9 +574,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C10priceMulti_5tsyms7success7failureySS_SSySDySSSDySSSdGGcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/priceMulti(_:tsyms:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C10priceMulti_5tsyms7success7failureySS_SSySDySSSDySSSdGGcSgys5Error_pcSgtF">priceMulti(_:tsyms:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C10priceMulti_5tsyms17completionHandlerySS_SSyAA6ResultOySDySSSDySSSdGGs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/priceMulti(_:tsyms:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C10priceMulti_5tsyms17completionHandlerySS_SSyAA6ResultOySDySSSDySSSdGGs5Error_pGctF">priceMulti(_:tsyms:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -543,8 +593,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">priceMulti</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsyms</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                        <span class="nv">tsyms</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                       <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C10PriceMultia">PriceMulti</a></span><span class="o">&gt;</span><span class="p">?,</span>
-                       <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                       <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:16CryptoCompareKit10PriceMultia">PriceMulti</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -572,7 +621,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Comma separated cryptocurrency symbols list to convert into [Max character length: 100]</p>
+                                  <p>Comma separated cryptocurrency symbols list
+to convert into [Max character length: 100]</p>
                                 </div>
                               </td>
                             </tr>
@@ -609,9 +659,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C14priceMultiFull_5tsyms7success7failureySS_SSyAA05PriceeF0VcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/priceMultiFull(_:tsyms:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C14priceMultiFull_5tsyms7success7failureySS_SSyAA05PriceeF0VcSgys5Error_pcSgtF">priceMultiFull(_:tsyms:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C14priceMultiFull_5tsyms17completionHandlerySS_SSyAA6ResultOyAA05PriceeF0Vs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/priceMultiFull(_:tsyms:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C14priceMultiFull_5tsyms17completionHandlerySS_SSyAA6ResultOyAA05PriceeF0Vs5Error_pGctF">priceMultiFull(_:tsyms:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -619,7 +669,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get all the current trading info (price, vol, open, high, low etc) of any list of cryptocurrencies in any other currency that you need.</p>
+                        <p>Get all the current trading info (price, vol, open, high, low etc) of any list
+of cryptocurrencies in any other currency that you need.</p>
 
                       </div>
                       <div class="declaration">
@@ -628,8 +679,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">priceMultiFull</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsyms</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                            <span class="nv">tsyms</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                           <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/PriceMultiFull.html">PriceMultiFull</a></span><span class="o">&gt;</span><span class="p">?,</span>
-                           <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                           <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/PriceMultiFull.html">PriceMultiFull</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -657,7 +707,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Comma separated cryptocurrency symbols list to convert into [Max character length: 100]</p>
+                                  <p>Comma separated cryptocurrency symbols list
+to convert into [Max character length: 100]</p>
                                 </div>
                               </td>
                             </tr>
@@ -694,9 +745,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16CryptoCompareKit0aB0C20priceGenerateAverage_4tsym1e7success7failureySS_S2SyAA05PriceeF0VcSgys5Error_pcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/priceGenerateAverage(_:tsym:e:success:failure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16CryptoCompareKit0aB0C20priceGenerateAverage_4tsym1e7success7failureySS_S2SyAA05PriceeF0VcSgys5Error_pcSgtF">priceGenerateAverage(_:tsym:e:success:failure:)</a>
+                    <a name="/s:16CryptoCompareKit0aB0C20priceGenerateAverage_4tsym1e17completionHandlerySS_S2SyAA6ResultOyAA05PriceeF0Vs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/priceGenerateAverage(_:tsym:e:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CryptoCompareKit0aB0C20priceGenerateAverage_4tsym1e17completionHandlerySS_S2SyAA6ResultOyAA05PriceeF0Vs5Error_pGctF">priceGenerateAverage(_:tsym:e:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -704,7 +755,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Compute the current trading info (price, vol, open, high, low etc) of the requested pair as a volume weighted average based on the exchanges requested.</p>
+                        <p>Compute the current trading info (price, vol, open, high, low etc) of the requested pair
+as a volume weighted average based on the exchanges requested.</p>
 
                       </div>
                       <div class="declaration">
@@ -714,8 +766,8 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">priceGenerateAverage</span><span class="p">(</span><span class="n">_</span> <span class="nv">fsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                                  <span class="nv">tsym</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                                  <span class="nv">e</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                 <span class="nv">success</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15SuccessResponsea">SuccessResponse</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/PriceGenerateAverage.html">PriceGenerateAverage</a></span><span class="o">&gt;</span><span class="p">?,</span>
-                                 <span class="nv">failure</span><span class="p">:</span> <span class="kt"><a href="../Classes/CryptoCompare.html#/s:16CryptoCompareKit0aB0C15FailureResponsea">FailureResponse</a></span><span class="p">?)</span></code></pre>
+                                 <span class="nv">completionHandler</span><span class="p">:</span>
+    <span class="p">(</span><span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt"><a href="../Structs/PriceGenerateAverage.html">PriceGenerateAverage</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
 
                         </div>
                       </div>
@@ -755,7 +807,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The exchange to obtain data from (our aggregated average - CCCAGG - by default) [Max character length: 150].</p>
+                                  <p>The exchange to obtain data from
+(our aggregated average - CCCAGG - by default) [Max character length: 150].</p>
                                 </div>
                               </td>
                             </tr>
@@ -791,14 +844,15 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/sger/CryptoCompareKit" target="_blank" rel="external">Spiros Gerokostas</a>. All rights reserved. (Last updated: 2018-11-13)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://github.com/sger/CryptoCompareKit" target="_blank" rel="external">Spiros Gerokostas</a>. All rights reserved. (Last updated: 2019-07-30)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>

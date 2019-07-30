@@ -6,7 +6,7 @@ TARGET ?= CryptoCompareKit
 PLATFORM ?= iOS
 
 ifeq ($(PLATFORM), iOS)
-	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 7,OS=12.0'
+	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 8,OS=12.2'
 endif
 
 XCPRETTY :=
@@ -24,7 +24,7 @@ clean:
 	$(XCODEBUILD) clean $(BUILD_FLAGS) $(XCPRETTY)
 
 bootstrap: dependencies
-	brew update || brew update
+	brew update
 	brew unlink swiftlint || true
 	brew install swiftlint
 	brew link --overwrite swiftlint
@@ -39,11 +39,12 @@ lint:
 	swiftlint lint --reporter json --strict
 
 documentation:
-    @jazzy \
-        --min-acl internal \
-        --no-hide-documentation-coverage \
-        --theme fullwidth \
-        --output ./docs \
-        --documentation=./*.md
+	@jazzy \
+            --min-acl internal \
+            --no-hide-documentation-coverage \
+            --theme fullwidth \
+            --output ./docs \
+            --documentation=./*.md
+	@rm -rf ./build
 
 .PHONY: test clean dependencies lint cocoapods
