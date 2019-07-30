@@ -40,7 +40,10 @@ jobs:
           branch: master
 
     - stage: deploy
-      script: pod trunk push --verbose
+      script: |
+        set -exo pipefail
+        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+      after_failure: cat pod.log | grep error
       on:
         tags: true
 
