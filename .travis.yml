@@ -25,14 +25,15 @@ jobs:
       script:
         - make test
 
-after_success:
-  - gem install jazzy
-  - make documentation
+    - stage: documentation
+      script:
+        - gem install jazzy
+        - make documentation
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        local-dir: docs
+        on:
+          branch: docs
 
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  local-dir: docs
-  on:
-    branch: docs
