@@ -3,7 +3,6 @@ osx_image: xcode10.2
 
 branches:
   only:
-    - develop
     - master
 
 env:
