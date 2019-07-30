@@ -24,15 +24,11 @@ clean:
 	$(XCODEBUILD) clean $(BUILD_FLAGS) $(XCPRETTY)
 
 bootstrap: dependencies
-	brew update
-	brew unlink swiftlint || true
 	brew install swiftlint
-	brew link --overwrite swiftlint
 
 dependencies: cocoapods
 
 cocoapods:
-	pod repo update
 	pod install
 
 lint:
