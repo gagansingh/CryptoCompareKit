@@ -3,7 +3,9 @@ osx_image: xcode10.2
 
 branches:
   only:
-    - docs
+    - develop
+    - master
+
 env:
   - LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8
 
@@ -35,5 +37,5 @@ jobs:
         github-token: $GITHUB_TOKEN
         local-dir: docs
         on:
-          branch: docs
+          branch: master
 
