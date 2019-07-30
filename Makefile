@@ -23,13 +23,8 @@ test:
 clean:
 	$(XCODEBUILD) clean $(BUILD_FLAGS) $(XCPRETTY)
 
-bootstrap: dependencies
+bootstrap:
 	brew install swiftlint
-
-dependencies: cocoapods
-
-cocoapods:
-	pod install
 
 lint:
 	swiftlint lint --reporter json --strict
