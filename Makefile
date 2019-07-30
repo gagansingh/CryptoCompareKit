@@ -6,7 +6,7 @@ TARGET ?= CryptoCompareKit
 PLATFORM ?= iOS
 
 ifeq ($(PLATFORM), iOS)
-	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 8,OS=12.4'
+	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 8,OS=12.2'
 endif
 
 XCPRETTY :=
