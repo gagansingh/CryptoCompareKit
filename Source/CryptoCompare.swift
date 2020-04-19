@@ -8,11 +8,6 @@
 
 import os.log
 
-public enum Result<Value, Error> {
-    case success(Value)
-    case failure(Error)
-}
-
 public class CryptoCompare: CryptoCompareProtocol {
 
     public static var apiKey: String = ""
