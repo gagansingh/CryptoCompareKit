@@ -7,11 +7,7 @@
 //
 
 import os.log
-
-public enum Result<Value, Error> {
-    case success(Value)
-    case failure(Error)
-}
+import Foundation
 
 public class CryptoCompare: CryptoCompareProtocol {
 
@@ -26,10 +22,8 @@ public class CryptoCompare: CryptoCompareProtocol {
     }
 
     private let urlSession = URLSession(configuration: .default)
-
-    public static let shared = CryptoCompare()
-
-    private init() {}
+    
+    public init() {}
 
     @discardableResult
     public func request<T: Decodable>(_ endpoint: String,
