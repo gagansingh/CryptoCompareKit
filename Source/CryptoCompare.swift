@@ -21,10 +21,8 @@ public class CryptoCompare: CryptoCompareProtocol {
     }
 
     private let urlSession = URLSession(configuration: .default)
-
-    public static let shared = CryptoCompare()
-
-    private init() {}
+    
+    public init() {}
 
     @discardableResult
     public func request<T: Decodable>(_ endpoint: String,

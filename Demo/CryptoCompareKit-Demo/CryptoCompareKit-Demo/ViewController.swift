@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let cryptoCompare = CryptoCompare()
       
-        CryptoCompare.shared.coinlist { result in
+        cryptoCompare.coinlist { result in
             switch result {
             case let .success(coinList):
                 print(coinList)
