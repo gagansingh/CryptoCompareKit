@@ -1,5 +1,5 @@
 //
-//  List.swift
+//  GeneralInfo.swift
 //  CryptoCompareKit
 //
 //  Created by Spiros Gerokostas on 04/11/2018.
@@ -10,6 +10,9 @@ extension CryptoCompare {
     @discardableResult
     public func coinlist(completionHandler: (@escaping (Result<Coins, Error>) -> Void))
         -> CryptoCompareRequest? {
-        return request("/all/coinlist", completionHandler: completionHandler)!
+            guard let request = request("/all/coinlist", completionHandler: completionHandler) else {
+                return nil
+            }
+            return request
     }
 }
