@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct CoinList: Decodable {
+public struct Coins: Decodable {
     public let data: [String: Coin]
     public let response: String
     public let message: String
