@@ -6,7 +6,7 @@
 //  Copyright © 2018 Spiros Gerokostas. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

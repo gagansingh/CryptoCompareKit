@@ -6,7 +6,7 @@
 //  Copyright © 2019 Spiros Gerokostas. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public protocol CryptoCompareProtocol {
     func coinlist(completionHandler: (@escaping (Result<Coins, Error>) -> Void))
